@@ -7,72 +7,135 @@
 #include <cstdlib>
 #include <fstream>
 
+
+
 using namespace std;
-class osoba
-{
-public:
-
-	string imie;
-	string nazwisko;
-	string wiek;
-	string plec;
-	string kod_pocztowy;
-	string miasto;
-	string ulica;
-	int numer_domu;
-	int numer_mieszkania;
-
-
-	void pokaz_info(string imie, string nazwwisko, string wiek)
-	{
-		std::cout << imie << " " << nazwisko << " " << wiek << endl << "\n\n";
-	}
-
-
-};
 
 
 int main()
 {
-	osoba osoba;
-	std::cout << "Dodawanie nowej osoby:\n\n\n";
-	int i;
 
-	for (i = 0; i <= 2; i++)
+	int liczba;
+	int a = 0;
+	do
 	{
-		std::cout << " Podaj imie:\n ";
-		std::cin >> osoba.imie;
 
-		std::cout << "Podaj nazwisko:\n ";
-		std::cin >> osoba.nazwisko;
+		system("cls"); 
 
-		std::cout << "Podaj swoj wiek:\n ";
-		std::cin >> osoba.wiek;
+		cout << "\n\t\t\tREJESTR OSOBOWY\n\n\n";
+		cout << "\tWpisz numer opcji: \n\n\t";
+		cout << "1. Dodawanie nowej osoby.\n\t";
+		cout << "2. Modyfikowanie danych osob w rejestrze.\n\t";
+		cout << "3. Usuwanie osob z rejestru.\n\t";
+		cout << "4. Wyszukowanie osob z rejestru.\n\t";
+		cout << "5. Zakonczenie pracy z programem\n\n\t";
+		cout << "Wybieraj znaki 1,2,3,4, lub 5 - zakoncz\n\n\t";
+		cout << "Podaj numer danej opcji: ";
+		cin >> liczba;
+		cout << endl;
 
-		std::cout << "Podaj swoja plec:\n ";
-		std::cin >> osoba.plec;
+		switch (liczba)
 
-		std::cout << "Podaj Kod Pocztowy:\n ";
-		std::cin >> osoba.kod_pocztowy;
+		{
+			
+		case 1:
+			
+			system("cls");
 
-		std::cout << "Podaj nazwe miasta:\n ";
-		std::cin >> osoba.miasto;
+			cout << "Dodawanie nowej osoby:\n\n\n";
+			cout << "Podaj liczbe osob do wpisania: ";
+			int n; 
+			cin >> n;
 
-		std::cout << "Podaj ulice:\n ";
-		std::cin >> osoba.ulica;
+			char TabImie[200][20];
+			char TabNazwisko[200][50];
+			char TabPlec[200];
+			char TabKod_Pocztowy[20];
+			char TabMiasto[200];
+			char TabUlica[200];
+			int TabNumer_domu[200];
+			int TabNumer_mieszkania[200];
+			int TabWiek[200];
 
-		std::cout << "Podaj numer domu:\n ";
-		std::cin >> osoba.numer_domu;
 
-		std::cout << "Podaj numer mieszkania:\n ";
-		std::cin >> osoba.numer_mieszkania;
+			for (int i = 0; i < n; i++)
+			{
+				cout << "\nPodaj imie: ";
+				cin >> TabImie[i];
+				cout << "\nPodaj nazwisko: ";
+				cin >> TabNazwisko[i]; 
+				cout << "\nPodaj swoj wiek ";
+				cin >> TabWiek[i];
+				cout << "\nPodaj swoja plec ";
+				cin >> TabPlec[i];
+				cout << "\nPodaj swoj kod pocztowy ";
+				cin >> TabKod_Pocztowy[i];
+				cout << "\nPodaj swoje miasto ";
+				cin >> TabMiasto[i];
+				cout << "\nPodaj swoja ulice ";
+				cin >> TabUlica[i];
+				cout << "\nPodaj swoj numer domu ";
+				cin >> TabNumer_domu[i];
+				cout << "\nPodaj swoj numer mieszkania ";
+				cin >> TabNumer_mieszkania[i];
+				cout << "\nPodaj dane nastepnej osoby:\n\n ";
+			}
+
+			
+					cout << "Ilosc wprowadzonych osob: " << n;
+					system("pause");
 
 
-		std::cout << "\n\nPoprawnie zakonczono wprowadzanie danych. \n\n\n\a";
-		system("pause");
-	}
-	osoba.pokaz_info(osoba.imie, osoba.nazwisko, osoba.wiek);
+			cout << "\n\nPoprawnie zakonczono wprowadzanie danych. \n\n\n\a";
+			break;
+			system("pause");
+
+
+
+		case 2:
+
+			// brak narazie
+
+		case 3:
+			
+			// brak narazie
+
+		case 4:
+
+			system("cls");
+
+			cout << "Wyswietlanie osob na liscie: \n\n";
+			cout << "Obecnie na liscie znajduja sie nastepujace osoby:\n\n ";
+
+			for (int i = 0; i < n; i++)
+			{
+				cout << TabNazwisko[i] << " " << TabImie[i] << " " << TabWiek[i]  << endl;
+			}
+			break;
+
+			system("pause");
+
+		case 5:
+			
+			system("cls");
+			cout << "\n\tDziekujemy za skorzystanie z naszego programu!\n\n";
+			
+
+			system("pause");
+
+		
+			
+
+
+			
+
+			//default:
+			//cout<< "W programie nie przewidziano takiej opcji wpisz poprawny numer opcji!";
+
+		}
+
+	} while (liczba != 5);
+
+	
 }
-
-
 
