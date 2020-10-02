@@ -1,4 +1,4 @@
-﻿
+
 #include "pch.h"
 #include <iostream>
 #include <string>
@@ -11,7 +11,7 @@ using namespace std;
 class osoba
 {
 public:
-
+	
 	string imie;
 	string nazwisko;
 	string wiek;
@@ -28,7 +28,7 @@ public:
 		std::cout << imie << " " << nazwisko << " " << wiek << endl << "\n\n";
 	}
 
-
+	
 };
 
 
@@ -38,14 +38,14 @@ int main()
 	std::cout << "Dodawanie nowej osoby:\n\n\n";
 	int i;
 
-	for (i = 0; i <= 2; i++)
+	for (i = 0; i <= 2; i++) 
 	{
 		std::cout << " Podaj imie:\n ";
 		std::cin >> osoba.imie;
 
 		std::cout << "Podaj nazwisko:\n ";
 		std::cin >> osoba.nazwisko;
-
+		
 		std::cout << "Podaj swoj wiek:\n ";
 		std::cin >> osoba.wiek;
 
